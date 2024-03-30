@@ -10,7 +10,7 @@ def login():
     if usernameEntry.get() == username and passEntry.get() == password:
         messagebox.showinfo(title="Login Success", message="You successfully logged in.")
         app.destroy()
-        os.system("python menu.py")
+        os.system("python assets/menu.py")
     else:
         messagebox.showerror(title="Error", message="Invalid login.")
 
