@@ -197,6 +197,13 @@ class FlightManagementSystem:
             # Insert the newly added flight into the TreeView
             self.tree.insert("", "end", values=new_flight)
             messagebox.showinfo("Success", "Flight added successfully.")
+            
+            # Clear input fields
+            self.origin_entry.delete(0, 'end')
+            self.destination_entry.delete(0, 'end')
+            self.date_entry.delete(0, 'end')
+            self.travel_class_combobox.set('')
+            self.price_entry.delete(0, 'end')
         except Exception:
             messagebox.showerror("Error", "Failed to add flight!")
 
